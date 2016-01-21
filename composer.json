@@ -17,7 +17,7 @@
 		"dg/dibi": ">=2.0 <=3.999"
 	},
 	"require-dev": {
-		"nette/tester": "dev-master"
+		"nette/tester": "~1.0"
 	},
 	"replace": {
 		"tharos/leanmapper": "2.*"

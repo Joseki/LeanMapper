@@ -11,7 +11,7 @@
 
 namespace LeanMapper;
 
-use DibiRow;
+use Dibi\Row as DibiRow;
 use LeanMapper\Exception\InvalidArgumentException;
 use LeanMapper\Exception\InvalidStateException;
 use LeanMapper\Reflection\AnnotationsParser;

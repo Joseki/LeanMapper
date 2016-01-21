@@ -12,9 +12,8 @@
 namespace LeanMapper;
 
 use Closure;
-use DibiSqliteDriver;
-use DibiSqlite3Driver;
-use DibiRow;
+use Dibi\Drivers\Sqlite3Driver as DibiSqlite3Driver;
+use Dibi\Row as DibiRow;
 use LeanMapper\Exception\InvalidArgumentException;
 use LeanMapper\Exception\InvalidMethodCallException;
 use LeanMapper\Exception\InvalidStateException;
@@ -819,7 +818,7 @@ class Result implements \Iterator
 
 		$driver = $this->connection->getDriver();
 		// now we have to fix wrongly generated SQL by dibi...
-		if ($driver instanceof DibiSqliteDriver or $driver instanceof DibiSqlite3Driver) {
+		if ($driver instanceof DibiSqlite3Driver) {
 			$sql = preg_replace('#(?<=UNION )\((SELECT.*?)\)(?= UNION|$)#', '$1', $sql); // (...) UNION (...) to ... UNION ...
 		} else {
 			$sql = preg_replace('#^(SELECT.*?)(?= UNION)#', '($1)', $sql); // ... UNION (...) to (...) UNION (...)

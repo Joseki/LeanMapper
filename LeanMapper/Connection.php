@@ -11,7 +11,6 @@
 
 namespace LeanMapper;
 
-use DibiConnection;
 use LeanMapper\Exception\InvalidArgumentException;
 
 /**
@@ -19,7 +18,7 @@ use LeanMapper\Exception\InvalidArgumentException;
  *
  * @author Vojtěch Kohout
  */
-class Connection extends DibiConnection
+class Connection extends \Dibi\Connection
 {
 
 	const WIRE_ENTITY = 1;
