@@ -15,7 +15,7 @@ use Closure;
 use LeanMapper\Exception\InvalidArgumentException;
 
 /**
- * DibiFluent with filter support
+ * \Dibi\Fluent with filter support
  *
  * @author Vojtěch Kohout
  */

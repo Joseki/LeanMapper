@@ -85,7 +85,7 @@ class Result implements \Iterator
 	/**
 	 * Creates new common instance (it means persisted)
 	 *
-	 * @param DibiRow|DibiRow[] $data
+	 * @param \Dibi\Row|\Dibi\Row[] $data
 	 * @param string $table
 	 * @param Connection $connection
 	 * @param IMapper $mapper
@@ -99,7 +99,7 @@ class Result implements \Iterator
 		if ($data instanceof DibiRow) {
 			$dataArray = array(isset($data->$primaryKey) ? $data->$primaryKey : self::DETACHED_ROW_ID => $data->toArray());
 		} else {
-			$e = new InvalidArgumentException('Invalid type of data given, only DibiRow, DibiRow[], ArrayAccess[] or array of arrays is supported at this moment.');
+			$e = new InvalidArgumentException('Invalid type of data given, only \Dibi\Row, \Dibi\Row[], ArrayAccess[] or array of arrays is supported at this moment.');
 			if (!is_array($data)) {
 				throw $e;
 			}

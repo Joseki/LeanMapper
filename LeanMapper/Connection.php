@@ -14,7 +14,7 @@ namespace LeanMapper;
 use LeanMapper\Exception\InvalidArgumentException;
 
 /**
- * DibiConnection with filter support
+ * \Dibi\Connection with filter support
  *
  * @author Vojtěch Kohout
  */
